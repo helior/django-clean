@@ -8,6 +8,7 @@
     2. .gitignore
 4. Create manage.py
 5. Create virtualenv venv
+5. Run pa
 6. Install dependencies: run pi
 7. Run django-admin startproject service .
 8. Run pm migrate
@@ -23,3 +24,12 @@ Run git status and just like, git reset --hard to wipe everything out.
 #### How to start-over:
 Delete `db.sqlite3`. Run pm migrate, and every next step after that (see above).
 
+
+## My aliases:
+```
+pa='source venv/bin/activate && echo '\''🐍 Python Virtualenv Activated!!'\'
+pi='python -m pip install -r requirements.txt'
+pm() {
+  python3 manage.py $@
+}
+```
