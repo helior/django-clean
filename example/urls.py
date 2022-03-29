@@ -2,7 +2,6 @@
 from django.urls import include, path
 from rest_framework import routers, serializers, viewsets
 from . import models
-from . import views
 
 
 class ExampleSerializer(serializers.HyperlinkedModelSerializer):
