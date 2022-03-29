@@ -36,9 +36,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     'rest_framework',
-    'example'
+    'example',
+    'account'
 ]
 
 MIDDLEWARE = [
@@ -51,9 +53,21 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+MIDDLEWARE_CLASSES = [
+    'account.middleware.LocaleMiddleware',
+    'account.middleware.TimezoneMiddleware',
+    'account.middleware.ExpiredPasswordMiddleware'
+]
+
 REST_FRAMEWORK = {}
 
 ROOT_URLCONF = 'service.urls'
+
+SITE_ID = 1
+
+TEMPLATE_CONTEXT_PROCESSORS = [
+    'account.context_processors.account'
+]
 
 TEMPLATES = [
     {
