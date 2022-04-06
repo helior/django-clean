@@ -1,15 +1,18 @@
 ## 🧼 Django Clean
 
-## What is this?
-This is a clean install of Django, with an example "project" that gets you a model, api endpoint, CMS-features, basic auth, etc. This is the starting point that **I enjoy using**, and maybe you will too!
+This is a clean install of **Django**, with an example "project" that gets you a model, API crud endpoint, CMS-features, API documentation, etc. This is the starting point that **I enjoy using**, and maybe you will too!
 
 Happy coding 👋🏼🔥
 
 ## What is Django?
 **[Django](https://www.djangoproject.com/)** is a basic, but very useful CMS/framework written in **[Python](https://www.python.org/)**.
 
+## ⬛️ Install
+1) Download the repository `git clone git@github.com:helior/django-clean.git`
+2) Read **"[How it was done](https://github.com/helior/django-clean#how-it-was-done)"** below, and run the the steps marked with a "⬛️"
 
-> ## How it was done (if you're curious):
+
+> ## How it was done (my notes to self):
 > 1. Make directory
 > 2. `cd` into directory
 > 3. Create basic files
@@ -27,28 +30,18 @@ Happy coding 👋🏼🔥
 >
 > *And so, this repo is a reflection of the above steps.*
 
-## Install
-1) download the repository `git clone git@github.com:helior/django-clean.git`
-2) Read **"[How it was done](https://github.com/helior/django-clean#how-it-was-done)"** above, and run the the steps marked with a "⬛️"
 
-
-**🔁 run these when you're starting a new branch.**
-
-## How to keep clean:
-(0) ⬛️ `git checkout -b dirty-stuff`
-
-(1) Run ⬛️ `rm -rf db.sqlite3`
-
-(2) Run every step with a 🔁 above.
-
-###### Note
-If you make changes to main that you don't intend to maintain, run `git status` and just like, `git reset --hard` to wipe everything clean again.
+## 🔁 Start over:
+1. ⬛️ `git checkout -b my-experimental-branch`
+2. Run ⬛️ `rm -rf db.sqlite3`
+3. Run every step with a 🔁 above.
 
 
 ## My aliases and functions:
 ```
 #aliases
 pa='source venv/bin/activate && echo '\''🐍 Python Virtualenv Activated!!'\'
+pd='deactivate && echo '\''🐍 Python Deactivated ❌'\'
 pi='python -m pip install -r requirements.txt'
 
 # bash/zsh functions
