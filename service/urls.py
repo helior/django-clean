@@ -21,11 +21,11 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Snippets API",
+      title="Django Clean",
       default_version='v1',
-      description="Test description",
+      description="Swagger docs for Django Clean!",
       terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@snippets.local"),
+      contact=openapi.Contact(email="dev-null@helior.info"),
       license=openapi.License(name="BSD License"),
    ),
    public=False,
