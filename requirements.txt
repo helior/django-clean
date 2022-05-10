@@ -2,3 +2,4 @@ django==3
 djangorestframework
 drf-yasg
 drf-yasg[validation]
+Pillow

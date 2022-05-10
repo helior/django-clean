@@ -6,4 +6,4 @@ class ExampleSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = models.Example
     # 🔁 Iterate over none-hidden attributes
-    fields = ['id', 'name', 'created_on', 'updated_on']
+    fields = ['id', 'name', 'image', 'created_on', 'updated_on']
