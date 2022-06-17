@@ -14,6 +14,8 @@ class ExampleViewSet(viewsets.ModelViewSet):
   parser_classes = (MultiPartParser, FormParser)
   queryset = models.Example.objects.all()
   serializer_class = serializers.ExampleSerializer
+  filter_backends = [DjangoFilterBackend]
+  filterset_fields = ['name', 'boolField', 'created_on', 'updated_on']
 
   def post(self, request, *args, **kwargs):
     file_serializer = serializers.ExampleSerializer(data=request.data)
