@@ -1,4 +1,5 @@
 django==3
+django-filter
 djangorestframework
 django-cors-headers
 drf-yasg

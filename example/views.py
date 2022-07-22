@@ -1,11 +1,16 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status, viewsets
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
 
+from . import filters
 from . import models
 from . import serializers
 
 class ExampleViewSet(viewsets.ModelViewSet):
+  filter_backends = [DjangoFilterBackend]
+  filterset_class = filters.ExampleFilter
+
   parser_classes = (MultiPartParser, FormParser)
   queryset = models.Example.objects.all()
   serializer_class = serializers.ExampleSerializer

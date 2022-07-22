@@ -10,7 +10,13 @@ class Example(models.Model):
     editable = False
   )
   name = models.CharField(max_length=200)
-  boolField = models.BooleanField()
+  value = models.DecimalField(
+    null=True,
+    blank=True,
+    unique=False,
+    max_digits=11,decimal_places=6, 
+  )
+  isGoodExample = models.BooleanField()
   image = models.ImageField(upload_to='example-images/%Y/%m/%d/', null=True, blank=True)
   created_on = models.DateTimeField(auto_now_add=True, null=False)
   updated_on = models.DateTimeField(auto_now=True, null=False)
