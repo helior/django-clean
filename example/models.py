@@ -25,4 +25,3 @@ class Example(models.Model):
 
   class Meta:
     verbose_name_plural = "Exampli"
-    ordering = ['-created_on']
